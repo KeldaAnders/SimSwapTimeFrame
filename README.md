@@ -15,7 +15,7 @@ Sandbox API Repository to describe, develop, document, and test the SimSwapTimeF
 
 ## Scope
 
-* Service API(s) "SimSwapTimeFrame" (see [APIBacklog#335](https://github.com/camaraproject/APIBacklog/issues/335))
+* Service API(s) "SimSwapTimeFrame" (see [APIBacklog.md](https://github.com/camaraproject/APIBacklog/blob/main/documentation/APIbacklog.md))
 * The API(s) provide(s) the API consumer with the ability to:
   * retrieve the SIM swap age band, i.e. a standardized, coarse recency bucket for the time elapsed since the most recent SIM swap of the User's phone number, to support fraud and risk decisioning.
 * The age band is returned in a single response, with bounded disclosure compared with an exact SIM swap date. Consumers apply their own thresholds and step-up logic outside the API contract.
