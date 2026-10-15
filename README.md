@@ -15,12 +15,38 @@ Sandbox API Repository to describe, develop, document, and test the SimSwapTimeF
 
 ## Scope
 
-* Service API(s) “SimSwapTimeFrame” (see APIBacklog.md)
+* Service API(s) "SimSwapTimeFrame" (see [APIBacklog#335](https://github.com/camaraproject/APIBacklog/issues/335))
 * The API(s) provide(s) the API consumer with the ability to:
-  * retrieve the SIM-swap age band/timeframe for a phone number.
-* The API is carved out from the existing [SimSwap](https://github.com/camaraproject/SimSwap) repository and managed as a separate CAMARA API repository; the existing SimSwap APIs remain unchanged.
+  * retrieve the SIM swap age band, i.e. a standardized, coarse recency bucket for the time elapsed since the most recent SIM swap of the User's phone number, to support fraud and risk decisioning.
+* The age band is returned in a single response, with bounded disclosure compared with an exact SIM swap date. Consumers apply their own thresholds and step-up logic outside the API contract.
+* The API continues the age-band work originating in [SimSwap#253](https://github.com/camaraproject/SimSwap/issues/253) and developed in [SimSwap#273](https://github.com/camaraproject/SimSwap/pull/273) (removed from SimSwap by SimSwap#292 before r4.1). It is managed as a separate API repository; the existing SimSwap APIs remain unchanged.
 * Describe, develop, document, and test the API(s)
 * Started: October 2026
+
+### Standardized age band values
+
+Values as settled in SimSwap#273 (open points, including the representation of `111`, are tracked in [#4](https://github.com/camaraproject/SimSwapTimeFrame/issues/4)). `d` is the time elapsed since the most recent SIM swap.
+
+| Value | Meaning |
+| --- | --- |
+| 1 | 0h ≤ d < 4h |
+| 2 | 4h ≤ d < 12h |
+| 3 | 12h ≤ d < 1d |
+| 4 | 1d ≤ d < 2d |
+| 5 | 2d ≤ d < 3d |
+| 6 | 3d ≤ d < 4d |
+| 7 | 4d ≤ d < 5d |
+| 8 | 5d ≤ d < 7d |
+| 9 | 7d ≤ d < 14d |
+| 10 | 14d ≤ d < 30d |
+| 11 | 30d ≤ d < 60d |
+| 12 | 60d ≤ d < 90d |
+| 13 | 90d ≤ d < 180d |
+| 14 | 180d ≤ d < 1y |
+| 15 | 1y ≤ d < 2y |
+| 16 | 2y ≤ d < 3y |
+| 17 | 3y+ |
+| 111 | SIM swap has never happened, positively confirmed (and the number never ported). A sentinel, not a position in the recency sequence. |
 
 <!-- CAMARA:RELEASE-INFO:START -->
 <!-- The following section is automatically maintained by the CAMARA project-administration tooling: https://github.com/camaraproject/project-administration -->
