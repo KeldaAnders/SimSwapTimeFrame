@@ -11,7 +11,7 @@
 
 Sandbox API Repository to describe, develop, document, and test the SimSwapTimeFrame Service API(s) within the Sub Project [Number Insights](https://lf-camaraproject.atlassian.net/wiki/x/BYEpBQ).
 
-* API Repository [wiki page](https://lf-camaraproject.atlassian.net/wiki/x/BYEpBQ)
+* API Repository [wiki page](https://lf-camaraproject.atlassian.net/wiki/x/A4ClS)
 
 ## Scope
 
