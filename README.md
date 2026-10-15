@@ -25,6 +25,7 @@ Sandbox API Repository to describe, develop, document, and test the SimSwapTimeF
 
 <!-- CAMARA:RELEASE-INFO:START -->
 <!-- The following section is automatically maintained by the CAMARA project-administration tooling: https://github.com/camaraproject/project-administration -->
+
 ## Release Information
 
 The repository has no (pre)releases yet, work in progress is within the main branch.
